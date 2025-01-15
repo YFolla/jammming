@@ -1,0 +1,92 @@
+.Playlist {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: calc(100% - 40px);
+}
+
+.Playlist-name {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: none;
+    border-bottom: 1px solid #6f6f6f;
+    font-size: 1.5rem;
+    color: white;
+    padding: 8px 0;
+    margin-bottom: 20px;
+}
+
+.Playlist-name:focus {
+    outline: none;
+    border-bottom-color: #1db954;
+}
+
+.Playlist-name::placeholder {
+    color: #6f6f6f;
+}
+
+.Playlist-save {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 16px 32px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    align-self: center;
+}
+
+.Playlist-save:hover:not(:disabled) {
+    background-color: #1ed760;
+    transform: scale(1.02);
+}
+
+.Playlist-save:disabled {
+    background-color: #404040;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.Playlist-save.saving {
+    background-color: #168f40;
+}
+
+/* Scrollbar styling */
+.Playlist::-webkit-scrollbar {
+    width: 8px;
+}
+
+.Playlist::-webkit-scrollbar-track {
+    background: #404040;
+    border-radius: 4px;
+}
+
+.Playlist::-webkit-scrollbar-thumb {
+    background: #686868;
+    border-radius: 4px;
+}
+
+.Playlist::-webkit-scrollbar-thumb:hover {
+    background: #787878;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .Playlist {
+        padding: 0 10px;
+    }
+
+    .Playlist-name {
+        font-size: 1.2rem;
+    }
+
+    .Playlist-save {
+        width: 100%;
+        padding: 12px 0;
+    }
+} 

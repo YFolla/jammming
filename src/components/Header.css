@@ -1,0 +1,83 @@
+.Header {
+    background-color: #000;
+    padding: 20px 0;
+    border-bottom: 1px solid #282828;
+}
+
+.Header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.Header-left h1 {
+    color: #1db954;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.Header-right {
+    display: flex;
+    align-items: center;
+}
+
+.Header-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Header-user-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.Header-username {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.Header-logout {
+    background: transparent;
+    border: 1px solid #b3b3b3;
+    color: #b3b3b3;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.Header-logout:hover {
+    border-color: #fff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .Header-content {
+        padding: 0 16px;
+    }
+
+    .Header-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .Header-username {
+        display: none;
+    }
+
+    .Header-logout {
+        padding: 6px 12px;
+    }
+} 

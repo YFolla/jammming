@@ -1,0 +1,103 @@
+.Tracklist {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding-right: 8px;
+}
+
+.Tracklist-controls {
+    display: flex;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid #282828;
+}
+
+.sort-button {
+    background: transparent;
+    border: 1px solid #404040;
+    color: #b3b3b3;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sort-button:hover {
+    border-color: #1db954;
+    color: #fff;
+}
+
+.sort-button.active {
+    background-color: #1db954;
+    border-color: #1db954;
+    color: white;
+}
+
+.Tracklist-tracks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.track-wrapper {
+    cursor: default;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.track-wrapper.dragging {
+    opacity: 0.5;
+    background: #282828;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Only show grab cursor on playlist tracks */
+.Playlist .track-wrapper {
+    cursor: grab;
+}
+
+.Playlist .track-wrapper:active {
+    cursor: grabbing;
+}
+
+.Tracklist-empty {
+    color: #b3b3b3;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Animation for track additions/removals */
+.Tracklist-tracks > * {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .Tracklist {
+        padding-right: 4px;
+    }
+
+    .Tracklist-controls {
+        flex-wrap: wrap;
+    }
+
+    .sort-button {
+        flex: 1;
+        min-width: 120px;
+    }
+} 

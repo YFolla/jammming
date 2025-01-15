@@ -1,0 +1,60 @@
+.App {
+  min-height: 100vh;
+  background-color: #121212;
+  color: white;
+}
+
+.App-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px;
+  min-height: calc(100vh - 80px);
+}
+
+.App-search-section,
+.App-playlist-section {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  height: calc(100vh - 144px);
+}
+
+/* Loading overlay */
+.App-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+  .App-content {
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .App-content {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .App-search-section,
+  .App-playlist-section {
+    height: auto;
+    min-height: 400px;
+  }
+}

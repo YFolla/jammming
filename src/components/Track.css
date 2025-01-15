@@ -1,0 +1,125 @@
+.Track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.Track:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Track-information {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0; /* Enables text truncation */
+}
+
+.Track-image {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.Track-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.Track-details {
+    min-width: 0; /* Enables text truncation */
+}
+
+.Track-name {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Track-artist {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    margin: 0 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Track-album {
+    color: #b3b3b3;
+    font-size: 0.8rem;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Track-action {
+    background: transparent;
+    border: 1px solid #1db954;
+    color: #1db954;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 16px;
+    padding: 0;
+    line-height: 1;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.Track-action:hover {
+    background-color: #1db954;
+    color: white;
+    transform: scale(1.1);
+}
+
+.Track-action:active {
+    transform: scale(0.95);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .Track {
+        padding: 8px;
+    }
+
+    .Track-image {
+        width: 32px;
+        height: 32px;
+    }
+
+    .Track-name {
+        font-size: 0.9rem;
+    }
+
+    .Track-artist {
+        font-size: 0.8rem;
+    }
+
+    .Track-album {
+        font-size: 0.75rem;
+    }
+
+    .Track-action {
+        width: 28px;
+        height: 28px;
+        font-size: 1.2rem;
+        margin-left: 12px;
+    }
+} 
